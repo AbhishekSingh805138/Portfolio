@@ -60,7 +60,7 @@
       <div class="timeline">
         <article *ngFor="let experience of experiences" class="timeline__item">
           <header class="timeline__header">
-            <h3>{{ experience.role }} &amp;middot; {{ experience.company }}</h3>
+            <h3>{{ experience.role }}; {{ experience.company }}</h3>
             <span class="timeline__period">{{ experience.period }}</span>
           </header>
           <p class="timeline__summary">{{ experience.summary }}</p>

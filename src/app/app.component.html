@@ -105,6 +105,8 @@
       <div class="contact__details">
         <a class="btn btn--primary" [href]="'mailto:' + email">Email {{ email }}</a>
         <p class="contact__location">Based in {{ location }}</p>
+        <p class="contact__location">Phone: {{ contact }}</p>
+
         <p class="contact__availability">{{ availability }}</p>
         <div class="contact__socials">
           <a *ngFor="let social of socials" [href]="social.url" target="_blank" rel="noopener">{{ social.label }}</a>

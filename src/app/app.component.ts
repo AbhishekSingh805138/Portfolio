@@ -58,7 +58,7 @@ interface SocialLink {
 export class AppComponent {
   // ===== Hero / About =====
   readonly name = 'Abhishek Singh';
-  readonly tagline = 'Full-Stack Engineer • Node.js, Angular, Python • Data & Real-time Systems';
+  readonly tagline = 'Full-Stack Developer • Data & Real-time Systems';
   readonly about = `Full-Stack engineer with experience building real-time and data-driven apps.
 Optimized EV Charging Management backends, shipped secure, scalable web apps, and delivered data workflows with Python/PySpark.
 Comfortable across API design, performance tuning, and production-grade deployments.`;
@@ -120,19 +120,20 @@ Comfortable across API design, performance tuning, and production-grade deployme
   // ===== Experience (concise metrics) =====
   readonly experiences: ExperienceItem[] = [
     {
-      company: 'Wipro',
-      role: 'Project Engineer',
-      period: 'September 2025 – Present • Pune',
-      // summary:
-      //   'EV Charging Management platform—backend optimization, secure web apps, and data processing.',
-      // highlights: [
-      //   'Cut API response time by ~25% and improved throughput by ~15% for CMS backends.',
-      //   'Built EV charging web app; reduced manual station ops by ~30% and improved user satisfaction by ~20%.',
-      //   'Threat Model tool surfaced 15 critical security issues; led fixes with best practices.',
-      //   'Automated invoice emailing via SMTP workflows, improving delivery efficiency by ~50%.',
-      //   'Parallel log analysis with PySpark reduced processing time by ~40%.'
-      // ]
-    },
+  company: 'Wipro',
+  role: 'Project Engineer',
+  period: 'September 2025 – Present • Pune',
+  summary:
+    'HSBC client project—Spring Boot microservices, Angular UI development, and GenAI-powered enhancements for enterprise workflows.',
+  highlights: [
+    'Developed and maintained Spring Boot REST APIs with secure authentication/authorization and optimized backend performance.',
+    'Built responsive Angular modules and reusable components, improving UI consistency and reducing development effort.',
+    'Integrated GenAI features to automate content generation and assist in faster issue resolution and knowledge retrieval.',
+    'Worked on end-to-end feature delivery including requirement analysis, development, testing, and production support.',
+    'Collaborated with cross-functional teams to fix bugs, enhance system stability, and ensure smooth releases.'
+  ]
+},
+
     {
       company: 'Cero Smart Mobility Pvt. Ltd.',
       role: 'Software Engineer',

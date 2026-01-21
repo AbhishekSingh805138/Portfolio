@@ -17,8 +17,8 @@ interface ExperienceItem {
   company: string;
   role: string;
   period: string;
-  summary: string;
-  highlights: string[];
+  summary?: string;
+  highlights?: string[];
 }
 
 interface ProjectItem {
@@ -59,12 +59,12 @@ export class AppComponent {
   // ===== Hero / About =====
   readonly name = 'Abhishek Singh';
   readonly tagline = 'Full-Stack Engineer • Node.js, Angular, Python • Data & Real-time Systems';
-  readonly about = `Full-stack engineer with experience building real-time and data-driven apps.
+  readonly about = `Full-Stack engineer with experience building real-time and data-driven apps.
 Optimized EV Charging Management backends, shipped secure, scalable web apps, and delivered data workflows with Python/PySpark.
 Comfortable across API design, performance tuning, and production-grade deployments.`;
   readonly aboutParagraphs = this.about.split('\n');
 
-  readonly availability = 'Open to full-time and contract roles from  2025 onwards';
+  readonly availability = 'Open to full-time and contract roles from  2026 onwards';
   readonly location = 'India';
   readonly email = 'abhisheksinghmuz1999@gmail.com';
   readonly contact = '6203430305';
@@ -80,8 +80,8 @@ Comfortable across API design, performance tuning, and production-grade deployme
 
   // ===== Focus Areas (short value props) =====
   readonly focusAreas = [
-    'Performance-first backends & real-time features.',
-    'Clean, testable Angular front-ends & component libraries.',
+    'Performance-first backends(Springboot , Nodejs , Django) & real-time features.',
+    'Clean, testable Angular/React front-ends & component libraries.',
     'Data pipelines & analytics with Python/PySpark.'
   ];
 
@@ -89,32 +89,54 @@ Comfortable across API design, performance tuning, and production-grade deployme
   readonly skillCategories: SkillCategory[] = [
     {
       title: 'Core Frontend',
-      skills: ['Angular (standalone APIs)', 'TypeScript', 'RxJS', 'NgRx', 'SCSS', 'Tailwind CSS']
+      skills: ['React , Angular ', 'TypeScript', 'RxJS', 'NgRx', 'SCSS', 'Tailwind CSS']
     },
     {
       title: 'Backend & APIs',
-      skills: ['Node.js', 'Express.js', 'Django', 'Flask', 'REST', 'WebSockets', 'JWT/Auth']
+      skills: ['Springboot, Node.js', 'Express.js', 'Django', 'Flask','FastAPI', 'RESTAPI', 'WebSockets', 'JWT/Auth']
     },
     {
       title: 'Data & Analytics',
-      skills: ['Python', 'PySpark', 'Pandas', 'NumPy', 'TensorFlow', 'Power BI', 'Tableau']
+      skills: ['Python', 'Data Engineering', 'PySpark', 'Pandas', 'NumPy', 'TensorFlow', 'Power BI', 'Tableau']
     },
     {
       title: 'Databases',
-      skills: ['MySQL', 'PostgreSQL', 'SQL Server', 'MongoDB']
+      skills: ['MySQL', 'PostgreSQL',  'MongoDB']
+    },
+     {
+      title: 'DevOps & CI/CD',
+      skills: ['Docker', 'Kubernetes', 'Jenkins', 'AWS (EC2, S3, RDS)', 'Azure (Cloud Functions, Blob Storage)', 'GitHub Actions']
     },
     {
       title: 'Tooling & Platform',
       skills: ['Git/GitHub', 'CI/CD', 'Testing (Jest, Playwright)', 'MLflow']
+    },
+    {
+      title: 'Certifications',
+      skills: ['AWS Certified Data Engineer Associate', 'AWS Certified Cloud Practitioner','AWS Certified Developer Associate', 'Databricks Certified Data Engineer Associate', 'Databricks Certified Generative AI Engineer Associate' ]
     }
   ];
 
   // ===== Experience (concise metrics) =====
   readonly experiences: ExperienceItem[] = [
     {
+      company: 'Wipro',
+      role: 'Project Engineer',
+      period: 'September 2025 – Present • Pune',
+      // summary:
+      //   'EV Charging Management platform—backend optimization, secure web apps, and data processing.',
+      // highlights: [
+      //   'Cut API response time by ~25% and improved throughput by ~15% for CMS backends.',
+      //   'Built EV charging web app; reduced manual station ops by ~30% and improved user satisfaction by ~20%.',
+      //   'Threat Model tool surfaced 15 critical security issues; led fixes with best practices.',
+      //   'Automated invoice emailing via SMTP workflows, improving delivery efficiency by ~50%.',
+      //   'Parallel log analysis with PySpark reduced processing time by ~40%.'
+      // ]
+    },
+    {
       company: 'Cero Smart Mobility Pvt. Ltd.',
-      role: 'Software Developer',
-      period: 'Oct 2024 – Present • Hyderabad',
+      role: 'Software Engineer',
+      period: 'September 2024 – September 2025 • Hyderabad',
       summary:
         'EV Charging Management platform—backend optimization, secure web apps, and data processing.',
       highlights: [
@@ -155,14 +177,23 @@ readonly projects: ProjectItem[] = [
     tags: ['Node.js','Angular', 'TypeScript', 'Express', 'TypeORM', 'PostgreSQL', 'JWT', 'VanillaJS'],
       sourceUrl: 'https://github.com/AbhishekSingh805138/Product-Management',
   },
- 
   {
-    name: 'Voting Application',
-    description:
-      'Secure app with JWT auth, MongoDB & WebSockets. REST APIs with ~99.9% uptime and real-time vote sync.',
-    tags: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'WebSockets'],
-     sourceUrl: 'https://github.com/AbhishekSingh805138/Voting_Backend_APP'
-  },
+  name: 'Upi-implementation(Micoservice)',
+  description:
+    'Full-stack banking app with Angular frontend and Java backend. Includes user flows, APIs, and modular design for finance use cases.',
+  tags: ['Springboot', 'Angular', 'Java', 'Microservices', 'TypeScript', 'SCSS', ],
+   sourceUrl: 'https://github.com/AbhishekSingh805138/upi-implemenation',
+   
+},
+ {
+  name: "Sentiment-Analyzer",
+  description:
+    "Sentiment Analyzer is a full-stack application that performs sentiment analysis on user-provided text and classifies it as Positive, Negative, or Neutral. Built with an Angular frontend and Nodejs backend, it provides a clean UI, REST APIs, and modular architecture for scalable NLP-based analysis.",
+  tags: ["FastAPI", "Angular", "Nodejs", "Microservices", "TypeScript", "SCSS"],
+  sourceUrl: "https://github.com/AbhishekSingh805138/Sentiment-Analyzer",
+},
+
+  
     {
     name: 'Real-Time Tracker',
     description:
@@ -184,15 +215,6 @@ readonly projects: ProjectItem[] = [
     tags: ['APIs', 'Security', 'Uptime'],
     sourceUrl: 'https://github.com/AbhishekSingh805138/Nodejs-_Gemini'
   },
-
- {
-  name: 'BankWeb',
-  description:
-    'Full-stack banking app with Angular frontend and Java backend. Includes user flows, APIs, and modular design for finance use cases.',
-  tags: ['Java', 'Angular', 'TypeScript', 'SCSS', 'Full-Stack'],
-   sourceUrl: 'https://github.com/AbhishekSingh805138/FRONTEND_JAVA-PROJECT'
-   // liveUrl: 'https://your-bankweb-demo.com',
-}
 
 ];
 
